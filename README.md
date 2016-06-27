@@ -44,3 +44,5 @@ following steps:
    may take a while to complete)
 4. Start the webserver with `cd vagrant; ./shiny-server.sh`
 5. Point your webserver on the host at [http://localhost:8081](http://localhost:8081)
+
+Travis CI on branch master: [![Build Status](https://travis-ci.org/siemens/codeface.svg?branch=master)](https://travis-ci.org/siemens/codeface)
