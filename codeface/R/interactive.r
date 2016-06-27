@@ -39,8 +39,8 @@ create.conf <- function(codeface.conf, project.conf=NULL) {
 }
 
 
-## Example session: Plot the initiation-response network
-########################################################
+## Example session 1: Plot the initiation-response network
+##########################################################
 
 ### Create a configuration object for project busybox
 ### Run this in codeface/R (or setwd() appropriately)
@@ -65,3 +65,23 @@ create.conf <- function(codeface.conf, project.conf=NULL) {
 ### Store the resulting graphs
 #ggsave("/tmp/ir1.pdf", g[[1]])
 #ggsave("/tmp/ir2.pdf", g[[2]])
+
+
+## Example session 2: Plot the global collaboration graph
+##########################################################
+#source(interactive.r)
+#conf <- create.conf("/path/to/codeface.conf", "/path/to/busybox.conf")
+#source("clusters.r")
+#range.ids <- query.range.ids.con(conf$con, conf$pid)
+#
+### Query the ID of the global collaboration cluster for a specific
+### revision range
+#rev.range <- 7
+#cluster.id <- query.global.collab.con(conf$con, conf$pid, range.ids[[rev.range]],
+#                                      "Spin Glass Community")
+#
+### ... and plot the graph
+#g <- construct.cluster(conf$con, cluster.id)
+#g <- annotate.cluster(g)
+#V(g)$name <- NA
+#plot(g)
