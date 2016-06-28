@@ -21,8 +21,8 @@
 ## Then, use standard query functions and the associated processing
 ## mechanisms to work with the database content.
 
-source("config.r")
-source("query.r")
+source("../config.r", chdir=TRUE)
+source("../query.r", chdir=TRUE)
 
 create.conf <- function(codeface.conf, project.conf=NULL) {
   ## Load configuration file(s)
@@ -37,51 +37,3 @@ create.conf <- function(codeface.conf, project.conf=NULL) {
 
   return(conf)
 }
-
-
-## Example session 1: Plot the initiation-response network
-##########################################################
-
-### Create a configuration object for project busybox
-### Run this in codeface/R (or setwd() appropriately)
-#source(interactive.r)
-#conf <- create.conf("/path/to/codeface.conf", "/path/to/busybox.conf")
-#
-### Load definitions of interest
-#source("ml/init.response.r")
-#
-### Obtain a list of range ids. Evert analysed release range is
-### uniquely identified by a single numeric id
-#range.ids <- query.range.ids(conf)
-#
-### Query data of interest (in this case, the initate-response
-### structure for the developer mailing list). The analysis range
-### is chosen arbitrarily
-#ml.id <- query.ml.id(conf, "dev")
-#dat <- query.initiate.response(conf$con, ml.id, range.ids[[3]])
-#dat <- prepare.initiate.response(dat)
-#g <- plot.init.response(g, title="Initate-response structure for busybox")
-#
-### Store the resulting graphs
-#ggsave("/tmp/ir1.pdf", g[[1]])
-#ggsave("/tmp/ir2.pdf", g[[2]])
-
-
-## Example session 2: Plot the global collaboration graph
-##########################################################
-#source(interactive.r)
-#conf <- create.conf("/path/to/codeface.conf", "/path/to/busybox.conf")
-#source("clusters.r")
-#range.ids <- query.range.ids.con(conf$con, conf$pid)
-#
-### Query the ID of the global collaboration cluster for a specific
-### revision range
-#rev.range <- 7
-#cluster.id <- query.global.collab.con(conf$con, conf$pid, range.ids[[rev.range]],
-#                                      "Spin Glass Community")
-#
-### ... and plot the graph
-#g <- construct.cluster(conf$con, cluster.id)
-#g <- annotate.cluster(g)
-#V(g)$name <- NA
-#plot(g)
