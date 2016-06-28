@@ -20,7 +20,7 @@
 
 suppressPackageStartupMessages(library(stringr))
 suppressPackageStartupMessages(library(lubridate))
-suppressPackageStartupMessages(library(reshape))
+suppressPackageStartupMessages(library(reshape2))
 source("config.r")
 source("db.r")
 source("query.r")

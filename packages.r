@@ -66,7 +66,7 @@ if(length(p) > 0) {
 
 p <- filter.installed.packages(c("statnet", "tm", "optparse", "arules", "data.table", "plyr",
                                  "igraph", "zoo", "xts", "lubridate", "xtable", "ggplot2",
-                                 "reshape", "wordnet", "stringr", "yaml", "ineq",
+                                 "reshape2", "wordnet", "stringr", "yaml", "ineq",
                                  "scales", "gridExtra", "scales", "RMySQL", "svglite",
                                  "RCurl", "mgcv", "shiny", "dtw", "httpuv", "devtools",
                                  "corrgram", "logging", "png", "rjson", "lsa", "RJSONIO",

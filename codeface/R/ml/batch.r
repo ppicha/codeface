@@ -40,7 +40,7 @@ s(library(Rgraphviz)) # Available on bioconductor
 s(library(lubridate))
 s(library(optparse))
 s(library(xtable))
-s(library(reshape))
+s(library(reshape2))
 s(library(plyr))
 rm(s)
 

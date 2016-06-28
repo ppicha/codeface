@@ -19,7 +19,7 @@
 ## Time series analysis based on the output of ts.py
 suppressPackageStartupMessages(library(optparse))
 suppressPackageStartupMessages(library(ggplot2))
-suppressPackageStartupMessages(library(reshape))
+suppressPackageStartupMessages(library(reshape2))
 suppressPackageStartupMessages(library(xts))
 suppressPackageStartupMessages(library(stringr))
 suppressPackageStartupMessages(library(scales))

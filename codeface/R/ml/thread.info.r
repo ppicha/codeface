@@ -18,7 +18,7 @@
 ## The functions work on the data frame returned by query.thread.info()
 
 suppressPackageStartupMessages(library(ggplot2))
-suppressPackageStartupMessages(library(reshape))
+suppressPackageStartupMessages(library(reshape2))
 
 plot.author.msg.scatter <- function(thread.info, title="") {
   ## How focused are discussions, respectively how does the number
