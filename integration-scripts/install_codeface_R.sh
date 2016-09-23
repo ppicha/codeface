@@ -4,7 +4,7 @@
 
 echo "Providing R libraries"
 
-sudo DEBIAN_FRONTEND=noninteractive apt-get -qqy install r-base r-base-dev \
+sudo DEBIAN_FRONTEND=noninteractive apt-get --force-yes -qqy install r-base r-base-dev \
 	r-cran-zoo r-cran-xts \
 	r-cran-xtable r-cran-reshape r-cran-stringr r-cran-scales \
 	r-cran-scales r-cran-rmysql r-cran-rcurl r-cran-mgcv \
